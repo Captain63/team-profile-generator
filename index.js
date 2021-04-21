@@ -43,8 +43,23 @@ const prompts = {
         questions: [
             {
                 type: "input",
-                message: "Test:",
-                name: "Test"
+                message: "Enter engineer's name:",
+                name: "engineerName"
+            },
+            {
+                type: "number",
+                message: "Enter engineer's ID:",
+                name: "engineerNumber"
+            },
+            {
+                type: "email",
+                message: "Enter engineer's email:",
+                name: "engineerEmail"
+            },
+            {
+                type: "input",
+                message: "Enter engineer's GitHub username:",
+                name: "engineerGitHub"
             }
         ]
     },
@@ -52,7 +67,26 @@ const prompts = {
     // Intern questions
     intern: {
         questions: [
-
+            {
+                type: "input",
+                message: "Enter intern's name:",
+                name: "internName"
+            },
+            {
+                type: "number",
+                message: "Enter intern's ID:",
+                name: "internNumber"
+            },
+            {
+                type: "email",
+                message: "Enter intern's email:",
+                name: "internEmail"
+            },
+            {
+                type: "input",
+                message: "Enter intern's school:",
+                name: "internSchool"
+            }
         ]
     }
 }
@@ -67,13 +101,13 @@ const writeToPage = () => {
     const startingTags = `
     <!DOCTYPE html>
     <html>
-    <head>
-    <title>Meet the Team</title>
-    </head>
-    <body>`;
+        <head>
+            <title>Meet the Team</title>
+        </head>
+        <body>`;
 
     const closingTags = `
-    </body>
+        </body>
     </html>`;
 
     // Manager will always be required, so these tags are assumed for that class
