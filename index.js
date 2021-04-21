@@ -100,7 +100,7 @@ const writeToPage = () => {
     const finishedHTML = startingTags + centerContent + closingTags;
 
     // Writes HTML file once content is assembled
-    fs.writeFile("index.html", finishedHTML, err => {
+    fs.writeFile("./dist/index.html", finishedHTML, err => {
         err ? console.error(err) : console.log("Page generated!");
     })
 }
