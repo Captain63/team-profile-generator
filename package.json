@@ -4,7 +4,10 @@
   "description": "Command line application to generate team profile HTML file",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test"
+    "test": "jest"
+  },
+  "directories": {
+    "test": "test"
   },
   "repository": {
     "type": "git",
