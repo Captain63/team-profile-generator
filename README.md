@@ -4,12 +4,12 @@
 ## Table of Contents
 - [Project Overview](#project-overview) 
 - [Installation](#installation)
-- [Project Walkthrough](#project-walkthrough)
+- [Walkthrough](#walkthrough)
 - [License](#license)
 - [Screenshots](#screenshots)
 
 ## Project Overview
-
+Command-line application that generates an HTML file of a work team for easy access to contact and other useful information. Application built using Node.js and leveraging the Inquirer and Jest packages from NPM. Bootstrap and Normalize.css CDNs are linked to style the HTML file without requiring an accompanying stylesheet.
 
 ### Languages Used
 - JavaScript (Node.js)
@@ -20,8 +20,12 @@
 - [Inquirer](https://www.npmjs.com/package/inquirer)
 - [Jest](https://www.npmjs.com/package/jest)
 - [Bootstrap](https://getbootstrap.com/)
+- [Font Awesome](https://fontawesome.com/)
 
-## Project Walkthrough
+## Installation
+Node.js is _required_ to use this application. Once cloned/downloaded from GitHub, run command "npm i" in command line to install Inquirer and Jest packages automatically.
+
+## Walkthrough
 [View the demonstration video on YouTube](#)
 
 ## License
@@ -30,5 +34,6 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 [View the full license](./LICENSE).
 
 ## Screenshots
-Screenshot of inquirer prompts with example responses
-Screenshot of finished HTML file in browser
+![Screenshot of inquirer prompts with example responses](./images/command-line-responses.PNG)
+
+![Screenshot of finished HTML file in browser](./images/finished-team-page.PNG)
