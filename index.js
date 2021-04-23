@@ -15,7 +15,7 @@ const prompts = {
         name: "menuResponse"
     },
 
-    // Manager questions to be served at start of collectResponses
+    // Manager questions
     manager: {
         questions: [
             {
@@ -94,18 +94,23 @@ const prompts = {
     }
 }
 
-// Variable declarations to store responses collected by inquirer
+// Variable declarations to store objects generated from responses collected by inquirer
 let managerResponses;
 const engineerResponses = [];
 const internResponses = [];
 
 // Logic to render content on page after inquirer finishes
 const writeToPage = () => {
+
+    // Opening HTML tags before cards
     const startingTags = `
     <!DOCTYPE html>
     <html>
         <head>
             <title>Meet the Team</title>
+
+            <!-- Sets viewport scaling to be consistent across devices -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
             <!-- Normalize CSS CDN link -->
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
@@ -124,6 +129,7 @@ const writeToPage = () => {
 
             <div class="row px-3">`;
 
+    // Ending HTML tags
     const closingTags = `
             </div>
         </body>
@@ -222,9 +228,13 @@ const serveMenu = () => {
                             responses["engineerGitHub"]
                         )
                     );
+
+                    // Reserves menu to add more employees
                     serveMenu();
                 });
-        } else if (input["menuResponse"] === "Add Intern") {
+        }
+        
+        if (input["menuResponse"] === "Add Intern") {
             inquirer
                 .prompt(prompts.intern.questions)
                 .then(responses => {
@@ -236,10 +246,14 @@ const serveMenu = () => {
                             responses["internEmail"],
                             responses["internSchool"]
                         )
-                    );;
+                    );
+
+                    // Reserves menu to add more employees
                     serveMenu();
                 });
-        } else {
+        }
+        
+        if (input["menuResponse"] === "No, I'm finished") {
             // Exits menu loop and calls writeToPage
             console.log("Responses captured");
             writeToPage();
