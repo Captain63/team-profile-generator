@@ -26,7 +26,7 @@ Command-line application that generates an HTML file of a work team for easy acc
 Node.js is _required_ to use this application. Once cloned/downloaded from GitHub, run command "npm i" in command line to install Inquirer and Jest packages automatically.
 
 ## Walkthrough
-[View the demonstration video on YouTube](#)
+[View the demonstration video on YouTube](https://youtu.be/aVqRFa-P4tI)
 
 ## License
 Permission is hereby granted, free of charge, to any person obtaining a copy of this Software and associated documentation files (the "Software"), to deal in the Software without  restriction, including without limitation the rights to use, copy, modify, merge, publish distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions.
