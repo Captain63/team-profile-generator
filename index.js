@@ -288,7 +288,7 @@ const initiateQuestions = () => {
 }
 
 // Creates dist directory (excluded in .gitignore) on initial function call for index.html to be saved under
-fs.mkdir('/dist', { recursive: true }, (err) => {
+fs.mkdir('./dist', { recursive: true }, (err) => {
     if (err) console.error(err);
 });
 
